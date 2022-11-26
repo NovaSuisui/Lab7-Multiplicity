@@ -1,0 +1,15 @@
+create table department 
+(
+departmentID int not null primary key generated always as identity (START WITH 1, INCREMENT BY 1),
+name varchar(80)
+);
+
+create table employee 
+(
+employeeID int not null primary key generated always as identity (START WITH 1, INCREMENT BY 1),
+name varchar(80),
+job varchar(30),
+salary int,
+departmentID int not null,
+foreign key (departmentID) references department(departmentID)
+);

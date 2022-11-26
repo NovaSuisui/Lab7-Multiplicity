@@ -28,8 +28,8 @@ public class MultiplicityDemo {
         emp1.setJob("Security");
         emp1.setSalary(15000);
         emp1.setDepartmentid(it);
-        //persist(it);
-        persist(emp1);*/
+        persist(it);*/
+        //persist(emp1);
         removeDepByID(1);
         
     }
