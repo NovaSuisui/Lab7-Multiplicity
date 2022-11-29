@@ -6,6 +6,8 @@
 package inheritancedemo;
 
 import java.io.Serializable;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,8 +20,11 @@ import javax.persistence.InheritanceType;
  * @author SK
  */
 @Entity
+//@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+//@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 @Inheritance(strategy=InheritanceType.JOINED)
-public class Employee implements Serializable {
+//@DiscriminatorColumn(name = "Table", discriminatorType = DiscriminatorType.STRING)
+public abstract class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id

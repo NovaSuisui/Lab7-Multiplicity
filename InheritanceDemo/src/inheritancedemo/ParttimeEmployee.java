@@ -6,6 +6,7 @@
 package inheritancedemo;
 
 import java.io.Serializable;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +17,7 @@ import javax.persistence.Id;
  * @author SK
  */
 @Entity
+//@DiscriminatorValue("PARTTIME")
 public class ParttimeEmployee extends Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;
